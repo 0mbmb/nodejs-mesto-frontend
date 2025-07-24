@@ -24,7 +24,7 @@ module.exports = {
       path: DEPLOY_PATH,
       ssh_options: ["ForwardAgent=yes", "StrictHostKeyChecking=no"],
       // "pre-deploy": `scp .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      "post-deploy": "npm i && npm run build",
+      "post-deploy": "sudo npm i && npm run build",
       // "post-deploy": "nvm use 18",
     },
   },
