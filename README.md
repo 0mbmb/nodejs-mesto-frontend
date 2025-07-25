@@ -8,6 +8,6 @@
 
 ## Деплой с помощью pm2:
 
-1. Создать .env.deploy
+1. Создать .env и .env.deploy
 2. Выполнить pm2 deploy production setup
 3. Выполнить pm2 deploy production
