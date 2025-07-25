@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: './.env.deploy'});
 
 const {
   DEPLOY_USER,
@@ -6,7 +6,7 @@ const {
   DEPLOY_PATH,
   DEPLOY_REF = "main",
   DEPLOY_REPO,
-} = process.env.deploy;
+} = process.env;
 
 module.exports = {
   deploy: {
