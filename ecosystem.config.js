@@ -6,7 +6,7 @@ const {
   DEPLOY_PATH,
   DEPLOY_REF = "main",
   DEPLOY_REPO,
-} = process.env;
+} = process.env.deploy;
 
 module.exports = {
   deploy: {
