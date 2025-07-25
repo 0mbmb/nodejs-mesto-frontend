@@ -9,12 +9,6 @@ const {
 } = process.env;
 
 module.exports = {
-  // apps: [{
-  //   name: 'mesto-api',
-  //   script: './dist/app.js',
-  // }],
-
-  // Настройка деплоя
   deploy: {
     production: {
       user: DEPLOY_USER,
@@ -25,7 +19,6 @@ module.exports = {
       ssh_options: ["ForwardAgent=yes", "StrictHostKeyChecking=no"],
       // "pre-deploy": `scp .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
       "post-deploy": "npm i && npm run build",
-      // "post-deploy": "nvm use 18",
     },
   },
 };
