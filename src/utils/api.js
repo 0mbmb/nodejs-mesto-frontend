@@ -1,3 +1,4 @@
+const { REACT_APP_API_HOST = 'http://localhost:3000' } = process.env;
 
 const getResponse = (res) => {
     return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
@@ -137,9 +138,9 @@ class Api {
       })
       .then(getResponse)
   }
-  }
-  // Замените на адрес вашего бэкенда
-  const api = new Api('http://localhost:3000');
+}
+ 
+const api = new Api(REACT_APP_API_HOST);
   
-  export default api;
+export default api;
   
